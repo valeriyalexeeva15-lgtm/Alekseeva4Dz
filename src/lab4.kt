@@ -29,11 +29,21 @@
 //}
 
 //4
-fun spawnEnemy(name: String, health: Int = 100, isBoss: Boolean = false) {
-    println("Враг: $name (Здоровье: $health HP${if (isBoss) " | БОСС!" else ""}")
+//fun spawnEnemy(name: String, health: Int = 100, isBoss: Boolean = false) {
+//    println("Враг: $name (Здоровье: $health HP${if (isBoss) " | БОСС!" else ""}")
+//}
+//
+//fun main() {
+//    spawnEnemy("Троль", 300)
+//    spawnEnemy("Король Тьмы", 500, true)
+//}
+
+//5
+fun calculateXP(level: Int): Int {
+    return level * 1000
 }
 
 fun main() {
-    spawnEnemy("Троль", 300)
-    spawnEnemy("Король Тьмы", 500, true)
+    val xp = calculateXP(5)
+    println("Для 5 уровня нужно: $xp опыта")
 }
