@@ -59,20 +59,39 @@
 //}
 
 //7
-fun castSpell() {
-    println("Каст случайного заклинания!")
+//fun castSpell() {
+//    println("Каст случайного заклинания!")
+//}
+//
+//fun castSpell(spell: String) {
+//    println("Каст заклинания $spell!")
+//}
+//
+//fun castSpell(spell: String, power: Int) {
+//    println("Каст $spell с силой $power!")
+//}
+//
+//fun main() {
+//    castSpell()
+//    castSpell("Молния")
+//    castSpell("Исцеление", 70)
+//}
+
+//8
+fun createWeapon(name: String): String {
+    return "Оружие: $name"
 }
 
-fun castSpell(spell: String) {
-    println("Каст заклинания $spell!")
+fun createWeapon(name: String, damage: Int): String {
+    return "Оружие: $name (Урон: $damage)"
 }
 
-fun castSpell(spell: String, power: Int) {
-    println("Каст $spell с силой $power!")
+fun createWeapon(damage: Int, isMagic: Boolean): String {
+    return "${if (isMagic) "Магическое" else "Обычное"} оружие (Урон: $damage)"
 }
 
 fun main() {
-    castSpell()
-    castSpell("Молния")
-    castSpell("Исцеление", 70)
+    println(createWeapon("Меч"))
+    println(createWeapon("Копье", 30))
+    println(createWeapon(25, true))
 }
