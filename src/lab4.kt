@@ -39,11 +39,21 @@
 //}
 
 //5
-fun calculateXP(level: Int): Int {
-    return level * 1000
+//fun calculateXP(level: Int): Int {
+//    return level * 1000
+//}
+//
+//fun main() {
+//    val xp = calculateXP(5)
+//    println("Для 5 уровня нужно: $xp опыта")
+//}
+
+//6
+fun checkInventory(item: String): Boolean {
+    return item == "Меч"
 }
 
 fun main() {
-    val xp = calculateXP(5)
-    println("Для 5 уровня нужно: $xp опыта")
+    println("Меч в инвентаре: ${checkInventory("Меч")}")
+    println("Зелье в инвентаре: ${checkInventory("Зелье")}")
 }
