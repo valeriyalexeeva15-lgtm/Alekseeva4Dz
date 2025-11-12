@@ -49,11 +49,30 @@
 //}
 
 //6
-fun checkInventory(item: String): Boolean {
-    return item == "Меч"
+//fun checkInventory(item: String): Boolean {
+//    return item == "Меч"
+//}
+//
+//fun main() {
+//    println("Меч в инвентаре: ${checkInventory("Меч")}")
+//    println("Зелье в инвентаре: ${checkInventory("Зелье")}")
+//}
+
+//7
+fun castSpell() {
+    println("Каст случайного заклинания!")
+}
+
+fun castSpell(spell: String) {
+    println("Каст заклинания $spell!")
+}
+
+fun castSpell(spell: String, power: Int) {
+    println("Каст $spell с силой $power!")
 }
 
 fun main() {
-    println("Меч в инвентаре: ${checkInventory("Меч")}")
-    println("Зелье в инвентаре: ${checkInventory("Зелье")}")
+    castSpell()
+    castSpell("Молния")
+    castSpell("Исцеление", 70)
 }
