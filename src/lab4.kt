@@ -78,20 +78,35 @@
 //}
 
 //8
-fun createWeapon(name: String): String {
-    return "Оружие: $name"
-}
+//fun createWeapon(name: String): String {
+//    return "Оружие: $name"
+//}
+//
+//fun createWeapon(name: String, damage: Int): String {
+//    return "Оружие: $name (Урон: $damage)"
+//}
+//
+//fun createWeapon(damage: Int, isMagic: Boolean): String {
+//    return "${if (isMagic) "Магическое" else "Обычное"} оружие (Урон: $damage)"
+//}
+//
+//fun main() {
+//    println(createWeapon("Меч"))
+//    println(createWeapon("Копье", 30))
+//    println(createWeapon(25, true))
+//}
 
-fun createWeapon(name: String, damage: Int): String {
-    return "Оружие: $name (Урон: $damage)"
-}
-
-fun createWeapon(damage: Int, isMagic: Boolean): String {
-    return "${if (isMagic) "Магическое" else "Обычное"} оружие (Урон: $damage)"
+//9
+fun heal(): String = "Лечение: +10 HP"
+fun heal(amount: Int): String = "Лечение: +$amount HP"
+fun heal(amount: Int, isPotion: Boolean): String {
+    return if (isPotion) "Выпито зелье (+$amount HP)"
+    else "Заклинание лечения (+$amount HP)"
 }
 
 fun main() {
-    println(createWeapon("Меч"))
-    println(createWeapon("Копье", 30))
-    println(createWeapon(25, true))
+    println(heal())
+    println(heal(20))
+    println(heal(60, true))
+    println(heal(25, false))
 }
